@@ -1,3 +1,5 @@
+
+console.log("SCRIPT INICIO");
 $(document).ready(function () {
 
     /***************** Waypoints ******************/
@@ -479,3 +481,46 @@ var MD5 = function (string) {
 
     return temp.toLowerCase();
 };
+
+
+console.log("SCRIPT COUNTDOWN ACTIVO");
+function startCountdown() {
+
+  const eventDate = new Date(2026, 8, 12, 21, 0, 0).getTime();
+
+  function updateCountdown() {
+
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    const daysEl = document.querySelector("#days");
+    const hoursEl = document.querySelector("#hours");
+    const minutesEl = document.querySelector("#minutes");
+    const secondsEl = document.querySelector("#seconds");
+
+    // 🔥 DEBUG CLAVE
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
+      console.log("❌ No se encontraron los elementos del contador");
+      return;
+    }
+
+    daysEl.innerText = days;
+    hoursEl.innerText = hours;
+    minutesEl.innerText = minutes;
+    secondsEl.innerText = seconds;
+
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+}
+
+startCountdown();
+
+console.log("SCRIPT FIN");
+});
