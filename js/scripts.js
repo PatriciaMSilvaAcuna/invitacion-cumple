@@ -194,13 +194,13 @@ $(document).ready(function () {
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Sep 10, 2026 05:00'),
+            end: new Date('Sep 12, 2026 05:00'),
 
             // Event Address
-            address: 'ITC Fortune Park Hotel, Kolkata',
+            address: 'Av del Libertador 7463, Cruce Castelar',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
+            description: "Espero verte!."
         }
     });
 
@@ -213,47 +213,17 @@ $(document).ready(function () {
 
     var data = $(this).serialize();
 
-    console.log("Enviando datos:", data);
+    $('#alert-wrapper').html("Enviando...");
 
-    $('#alert-wrapper').html(
-        alert_markup(
-            'info',
-            '<strong>Un momento...</strong> Estamos guardando tu respuesta.'
-        )
-    );
-    
-    $.post(
-        'https://script.google.com/macros/s/AKfycbwPqSObxfl_zd2_au4FIpQ3Hdm4IU-XuRVbMTKJivYLvaeJt7ER5zgk3vr83nwmk2DZpQ/exec',
-        data
-    )
-    .done(function (response) {
-
-        console.log("RESPUESTA OK:", response);
-
-        $('#alert-wrapper').html(
-            alert_markup(
-                'success',
-                '<strong>¡Gracias!</strong> Tu asistencia fue registrada 💖'
-            )
-        );
-
-        $('#rsvp-form')[0].reset();
-
-    })
-    .fail(function (error) {
-
-        console.log("ERROR AJAX:", error);
-
-        $('#alert-wrapper').html(
-            alert_markup(
-                'danger',
-                '<strong>Ups!</strong> No se pudo enviar al servidor.'
-            )
-        );
-
+    fetch("https://script.google.com/macros/s/AKfycbwPqSObxfl_zd2_au4FIpQ3Hdm4IU-XuRVbMTKJivYLvaeJt7ER5zgk3vr83nwmk2DZpQ/exec", {
+        method: "POST",
+        mode: "no-cors",
+        body: new URLSearchParams(data)
     });
-});
 
+    $('#alert-wrapper').html("💖 ¡Gracias! Tu asistencia fue registrada");
+    $('#rsvp-form')[0].reset();
+});
 
 /********************** Extras **********************/
 
