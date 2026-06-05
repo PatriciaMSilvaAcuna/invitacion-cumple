@@ -189,7 +189,7 @@ $(document).ready(function () {
             title: "Mica cumple 30",
 
             // Event start date
-            start: new Date('Sep 9, 2026 20:00'),
+            start: new Date('Sep 12, 2026 21:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,

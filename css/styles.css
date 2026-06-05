@@ -216,3 +216,279 @@ h5{
 .time-box small {
   opacity: 0.8;
 }
+footer {
+    background: linear-gradient(
+        180deg,
+        #fff5fa 0%,
+        #ffe0ef 100%
+    ) !important;
+}
+
+footer .to-top-wrapper {
+    background: #ff4fa3 !important;
+    border: 3px solid white !important;
+    box-shadow: 0 0 15px rgba(255,79,163,.5);
+}
+/* ===== Mica 30 - Estilo Si tuviera 30 ===== */
+
+.navigation {
+    background: linear-gradient(
+        90deg,
+        #ff4fa3,
+        #ff7bbd,
+        #ffb6d9
+    ) !important;
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,.4),
+        0 0 25px rgba(255,79,163,.5);
+}
+
+.navigation.fixed {
+    background: rgba(255, 79, 163, 0.98) !important;
+}
+
+.header-content {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.primary-nav li a,
+.member-actions li a,
+.nav-toggle {
+    color: white !important;
+    font-weight: 600;
+}
+
+.primary-nav li a:hover,
+.member-actions li a:hover {
+    color: #ffe4f1 !important;
+}
+/* Animación suave */
+.primary-nav li a,
+.member-actions li a {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Efecto hover */
+.primary-nav li a:hover,
+.member-actions li a:hover {
+    color: #fff !important;
+    transform: translateY(-3px);
+    text-shadow:
+        0 0 5px rgba(255,255,255,.8),
+        0 0 10px rgba(255,255,255,.6);
+}
+
+/* Línea animada debajo */
+.primary-nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.primary-nav li a:hover::after {
+    width: 100%;
+}
+.member-actions .btn-white {
+    background: linear-gradient(
+        135deg,
+        #ff4fa3,
+        #ff89c7
+    ) !important;
+
+    color: white !important;
+    border: none !important;
+
+    border-radius: 30px;
+    box-shadow:
+        0 4px 15px rgba(255,79,163,.35);
+
+    transition: all .3s ease;
+}
+
+.member-actions .btn-white:hover {
+    transform: translateY(-4px) scale(1.05);
+
+    box-shadow:
+        0 8px 25px rgba(255,79,163,.55);
+}
+.member-actions .btn-white {
+    overflow: hidden;
+    position: relative;
+}
+
+.member-actions .btn-white::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+
+    width: 60%;
+    height: 100%;
+
+    background: rgba(255,255,255,.35);
+
+    transform: skewX(-25deg);
+    transition: all .6s ease;
+}
+
+.member-actions .btn-white:hover::before {
+    left: 130%;
+}
+/* ===== Estilo Mica 30 ===== */
+
+.btn-accent {
+
+    background: linear-gradient(
+        135deg,
+        #ff4fa3,
+        #ff8ac4
+    ) !important;
+
+    border: none !important;
+
+    color: white !important;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 4px 15px rgba(255,79,163,.35);
+
+    transition: all .3s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover */
+
+.btn-accent:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(255,79,163,.55);
+
+    color: white !important;
+}
+
+/* Brillo que atraviesa */
+
+.btn-accent::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 60%;
+    height: 100%;
+
+    background: rgba(255,255,255,.35);
+
+    transform: skewX(-25deg);
+
+    transition: .7s;
+}
+
+.btn-accent:hover::before {
+
+    left: 130%;
+}
+.btn-accent {
+
+    background: linear-gradient(
+        90deg,
+        #ff4fa3,
+        #ff78ba,
+        #ffb6d9
+    ) !important;
+}
+/* HERO */
+.hero{
+    position:relative;
+    overflow:hidden;
+}
+
+/* base */
+.sticker{
+    position:absolute;
+    z-index:5;
+    pointer-events:none;
+}
+
+/* globos izquierda */
+
+.globos-left{
+    width:220px;
+
+    left:-40px;
+
+    top:220px;
+}
+/*globos dertecha*/
+
+    
+.globos-right{
+    width:220px;
+
+    right:-40px;
+
+    top:220px;
+    animation: flotar 5s ease-in-out infinite;
+}
+
+
+
+
+    
+
+/* Jenna */
+
+.jenna-hero{
+    position: absolute;
+    width:280px;
+
+    right:120px;
+
+    top:180px;
+
+    transform: rotate(-4deg);
+
+    z-index:8;
+}
+/* movimiento */
+@keyframes flotar{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0);}
+}
+.hero-content{
+    position: relative;
+}
+
+.jenna-hero{
+    position: absolute;
+
+    width: 320px;
+
+    top: 100px;
+    right: 150px;
+
+    z-index: 1;
+}
+
+.logo-principal{
+    position: relative;
+
+    z-index: 5;
+}
