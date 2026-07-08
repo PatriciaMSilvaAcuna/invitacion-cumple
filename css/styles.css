@@ -38,7 +38,7 @@ margin-bottom:20px;
 
     box-shadow:0 12px 25px rgba(0,0,0,.12);
 }
-background:#fff7fb;
+
 .events{
     background:#fff7fb;
 }
@@ -59,18 +59,11 @@ h5{
     background:#fff7fb !important;
 }
 
-/* Botones */
 
-.btn-accent{
-    background:#d97ba7 !important;
-    border-color:#d97ba7 !important;
-}
 
 /* Hover */
 
-.btn-accent:hover{
-    background:#c86a98 !important;
-}
+
 #map-content-wrapper{
     margin-top: 50px !important;
 }
@@ -78,52 +71,8 @@ h5{
 #map-content{
     position: relative !important;
 }
-.location-card{
 
-    background:#ffffff;
 
-    padding:40px;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.10);
-
-    margin-top:30px;
-
-    margin-bottom:30px;
-}
-.location-card{
-
-    background:#fff8fc;
-
-    border:2px solid #f6d8e5;
-
-    padding:40px;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-.location-card h3{
-    color:#d97ba7;
-}
-.location-card {
-  padding: 30px;
-  border-radius: 18px;
-  background: #fff;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-/* título */
-.location-card h3 {
-  margin-bottom: 10px;
-}
-
-/* descripción */
-.location-card p {
-  margin-bottom: 20px;
-  color: #666;
-}
 
 /* TODOS los campos iguales */
 .rsvp-form input,
@@ -160,10 +109,6 @@ h5{
   transition: 0.3s;
 }
 
-.btn-send:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(255,77,141,0.3);
-}
 
 /* mensaje */
 #rsvp-message {
@@ -171,9 +116,16 @@ h5{
   font-size: 14px;
 }
 .countdown-section {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #ff4d8d, #6a5cff);
-  color: white;
+  padding:60px 20px;
+
+  background:linear-gradient(
+      135deg,
+      #ff4fa3,
+      #ff89c7,
+      #ffd4e7
+  );
+
+  color:white;
 }
 
 .countdown-section h2 {
@@ -344,28 +296,7 @@ footer .to-top-wrapper {
 }
 /* ===== Estilo Mica 30 ===== */
 
-.btn-accent {
 
-    background: linear-gradient(
-        135deg,
-        #ff4fa3,
-        #ff8ac4
-    ) !important;
-
-    border: none !important;
-
-    color: white !important;
-
-    border-radius: 30px;
-
-    box-shadow:
-        0 4px 15px rgba(255,79,163,.35);
-
-    transition: all .3s ease;
-
-    position: relative;
-    overflow: hidden;
-}
 
 /* Hover */
 
@@ -380,38 +311,63 @@ footer .to-top-wrapper {
 }
 
 /* Brillo que atraviesa */
+.btn-accent{
 
-.btn-accent::before {
-
-    content: '';
-
-    position: absolute;
-
-    top: 0;
-    left: -120%;
-
-    width: 60%;
-    height: 100%;
-
-    background: rgba(255,255,255,.35);
-
-    transform: skewX(-25deg);
-
-    transition: .7s;
-}
-
-.btn-accent:hover::before {
-
-    left: 130%;
-}
-.btn-accent {
-
-    background: linear-gradient(
+    background:linear-gradient(
         90deg,
         #ff4fa3,
         #ff78ba,
         #ffb6d9
     ) !important;
+
+    border:none !important;
+
+    color:white !important;
+
+    border-radius:30px;
+
+    box-shadow:
+        0 4px 15px rgba(255,79,163,.35);
+
+    transition:all .3s ease;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.btn-accent:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(255,79,163,.55);
+
+    color:white !important;
+}
+
+.btn-accent::before{
+
+    content:'';
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:rgba(255,255,255,.35);
+
+    transform:skewX(-25deg);
+
+    transition:.7s;
+}
+
+.btn-accent:hover::before{
+
+    left:130%;
 }
 /* HERO */
 .hero{
@@ -429,43 +385,26 @@ footer .to-top-wrapper {
 /* globos izquierda */
 
 .globos-left{
-    width:220px;
+    width:260px;
 
-    left:-40px;
-
-    top:220px;
-}
-/*globos dertecha*/
-
-    
-.globos-right{
-    width:220px;
-
-    right:-40px;
-
-    top:220px;
-    animation: flotar 5s ease-in-out infinite;
-}
-
-
-
-
-    
-
-/* Jenna */
-
-.jenna-hero{
-    position: absolute;
-    width:280px;
-
-    right:120px;
+    left:-50px;
 
     top:180px;
 
-    transform: rotate(-4deg);
-
-    z-index:8;
+    animation:flotar 5s ease-in-out infinite;
 }
+
+.globos-right{
+    width:260px;
+
+    right:-50px;
+
+    top:180px;
+
+    animation:flotar 5s ease-in-out infinite;
+}
+
+
 /* movimiento */
 @keyframes flotar{
     0%{transform:translateY(0);}
@@ -477,18 +416,144 @@ footer .to-top-wrapper {
 }
 
 .jenna-hero{
-    position: absolute;
+    position:absolute;
 
-    width: 320px;
+    width:280px;
 
-    top: 100px;
-    right: 150px;
+    right:80px;
 
-    z-index: 1;
+    top:180px;
+
+    z-index:3;
+
+    opacity:.95;
 }
 
 .logo-principal{
     position: relative;
 
-    z-index: 5;
+    z-index: 10;
+}
+
+.hero::before{
+    content:'';
+
+    position:absolute;
+
+    width:1300px;
+    height:500px;
+
+    left:50%;
+    top:220px;
+
+    transform:translateX(-50%);
+
+    background-image:url('../img/pincelada.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+
+    opacity:.9;
+
+    z-index:1;
+}
+.location-card{
+    background:#fff8fc;
+
+    border:2px solid #f6d8e5;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-top:30px;
+
+    margin-bottom:30px;
+}
+
+.location-card h3{
+    color:#d97ba7;
+}
+
+.location-card p{
+    color:#666;
+}
+#eng-pics {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+#eng-pics::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/disco.jpg') center center no-repeat;
+    background-size: cover;
+    opacity: 0.15; /* ajustá entre 0.1 y 0.3 */
+    z-index: 0;
+}
+
+#eng-pics .container-fluid {
+    position: relative;
+    z-index: 1;
+}
+#countdown-title{
+    font-family:'Parisienne', cursive;
+    font-size:52px;
+    color:#fff;
+}
+.countdown-title{
+    display:inline-block;
+    position:relative;
+}
+
+.countdown-title::after{
+    content:'';
+
+    position:absolute;
+
+    width:100%;
+    height:12px;
+
+    bottom:-8px;
+    left:0;
+
+    background:rgba(255,255,255,.25);
+
+    border-radius:20px;
+}
+.event-info-inline {
+    margin-top: 35px;
+    font-size: 22px;
+    color: #3d4351;
+    font-weight: 400;
+    letter-spacing: .5px;
+}
+
+.event-info-inline i {
+    color: #e8ca6f;
+    margin-right: 8px;
+}
+
+.event-info-inline .separator {
+    margin: 0 18px;
+    color: #d3b35c;
+}
+
+@media (max-width: 768px) {
+    .event-info-inline {
+        font-size: 18px;
+        line-height: 2;
+    }
+
+    .event-info-inline .separator {
+        display: none;
+    }
+
+    .event-info-inline span {
+        display: block;
+    }
 }
